@@ -6,7 +6,7 @@ syntax: glob
 *.jar
 *.num
 *.MF
-*.g6
+#*.g6
 *.tgf
 .DS_Store
 *.DS_Store
