@@ -1,0 +1,19 @@
+syntax: glob
+*.class
+*.project
+*.settings
+*.classpath
+*.jar
+*.num
+*.MF
+*.g6
+*.tgf
+.DS_Store
+*.DS_Store
+*.html
+*.gif
+*.css
+
+syntax: regexp
+^builds
+^bin

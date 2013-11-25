@@ -1,0 +1,41 @@
+<project>
+
+    <target name="clean">
+        <delete dir="build/classes"/>
+    	<delete dir="doc"/>
+    </target>
+	
+	<target name="javadocs" depends="clean">
+	   <mkdir dir="doc"/>
+
+		 <javadoc sourcepath="src" destdir="doc"/>
+
+	</target>
+
+    <target name="compile" depends="clean, javadocs">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+
+    <target name="jar" depends="compile">
+	<property name="version.num" value="3.00"/>
+     	<buildnumber file="build.num"/>
+	<manifest file="MANIFEST.MF">
+      		<attribute name="Built-By" value="${user.name}"/>
+      		<attribute name="Library" value="annas"/>
+		<attribute name="URL" value="http://annas.googlecode.com"/>
+      		<attribute name="Implementation-Version" 
+             		value="${version.num}-b${build.number}"/>   
+      		<attribute name="Built-Date" value="${TODAY}"/>                 
+ 	</manifest>
+	<tstamp>
+     		<format property="TODAY" pattern="dd-MM-YY" />
+   	</tstamp>
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/annas-${TODAY}.jar" basedir="build/classes">
+		<zipgroupfileset dir="lib" includes="*.jar" /> 
+        </jar>
+    </target>
+
+	
+</project>
