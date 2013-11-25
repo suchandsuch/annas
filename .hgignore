@@ -3,7 +3,7 @@ syntax: glob
 *.project
 *.settings
 *.classpath
-*.jar
+#*.jar
 *.num
 *.MF
 #*.g6
@@ -15,5 +15,6 @@ syntax: glob
 *.css
 
 syntax: regexp
-^builds
+^build
 ^bin
+
