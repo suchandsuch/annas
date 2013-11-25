@@ -3,10 +3,8 @@ syntax: glob
 *.project
 *.settings
 *.classpath
-#*.jar
 *.num
 *.MF
-#*.g6
 *.tgf
 .DS_Store
 *.DS_Store
