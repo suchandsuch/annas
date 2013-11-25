@@ -17,4 +17,5 @@ syntax: glob
 syntax: regexp
 ^build
 ^bin
+^doc
 
